@@ -409,7 +409,6 @@ line-height:1.9;
 }
 
 }
-}
 html,
 body{
 width:100%;
@@ -430,6 +429,7 @@ max-width:700px;
 overflow-x:hidden;
 }
 
+}
 img{
 max-width:100%;
 display:block;
