@@ -120,11 +120,12 @@ background:rgba(255,255,255,.04);
 display:flex;
 gap:12px;
 flex-wrap:wrap;
+grid-template-columns: 1fr 1fr;
 justify-content:center;
 }
 
 .pol{
-width:150px;
+width:100%;
 height:220px;
 background:white;
 border-radius:12px;
@@ -134,9 +135,10 @@ padding:0;
 
 .pol img{
 width:100%;
-height:100%;
+height:220px;
 object-fit:cover;
 display:block;
+border-radius:16px;
 }
 
 .stats{
@@ -244,8 +246,8 @@ height:130px;
 .anime-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:16px;
-margin-bottom:25px;
+gap:15px;
+margin-bottom:20px;
 }
 
 .anime-box{
@@ -283,11 +285,14 @@ font-weight:600;
 .anime-grid{
 grid-template-columns:1fr;
 gap:20px;
+margin-bottom:20px;
 }
 
 .anime-box img{
-max-height:420px;
+height:180px;
 width:100%;
+object-fit:cover;
+border-radius:16px;
 }
 
 }
