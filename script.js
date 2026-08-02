@@ -37,28 +37,6 @@ document.querySelector(".progress").style.width=
 percent+"%";
 }
 
-let startX=0;
-
-document.addEventListener("touchstart",(e)=>{
-startX=e.touches[0].clientX;
-});
-
-document.addEventListener("touchend",(e)=>{
-
-const endX=e.changedTouches[0].clientX;
-
-const diff=startX-endX;
-
-if(diff>50){
-nextPage();
-}
-
-if(diff<-50){
-prevPage();
-}
-
-});
-
 for(let i=0;i<50;i++){
 
 const star=document.createElement("div");
