@@ -1,7 +1,9 @@
 *{
+max-width:100%;
 margin:0;
 padding:0;
 box-sizing:border-box;
+
 }
 
 :root{
@@ -24,7 +26,10 @@ background:var(--bg);
 color:var(--text);
 overflow:hidden;
 }
-
+html,body{
+width:100%;
+overflow-x:hidden;
+}
 .bg{
 position:fixed;
 inset:0;
@@ -38,7 +43,7 @@ linear-gradient(180deg,#050816,#0f172a,#050816);
 }
 
 .page{
-    min-height: 100vh;
+min-height: 100vh;
 position:absolute;
 inset:0;
 display:flex;
@@ -294,6 +299,115 @@ width:100%;
 object-fit:cover;
 border-radius:16px;
 }
+/* ===== FINAL MOBILE FIX ===== */
 
+.card{
+scrollbar-width:none;
+}
+
+.card::-webkit-scrollbar{
+display:none;
+}
+
+.btns{
+z-index:999;
+}
+
+.type{
+white-space:pre-wrap;
+line-height:2;
+font-size:1rem;
+}
+
+.pol img{
+object-position:center top;
+}
+
+@media(max-width:700px){
+
+.page{
+align-items:flex-start;
+padding-top:50px;
+overflow:hidden;
+}
+
+.card{
+padding:18px;
+border-radius:22px;
+width:100%;
+max-height:80vh;
+}
+
+h1{
+font-size:1.8rem;
+}
+
+h2{
+font-size:1.3rem;
+}
+
+/* PAGE 2 */
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.photo{
+height:420px;
+}
+
+/* PAGE 3 */
+
+.anime-grid{
+display:flex;
+overflow-x:auto;
+gap:15px;
+padding-bottom:10px;
+scroll-snap-type:x mandatory;
+}
+
+.anime-grid::-webkit-scrollbar{
+display:none;
+}
+
+.anime-box{
+min-width:220px;
+scroll-snap-align:center;
+}
+
+.anime-box img{
+width:100%;
+height:300px;
+object-fit:cover;
+border-radius:18px;
+}
+
+/* PAGE 4 */
+
+.polaroids{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+}
+
+.pol{
+width:100%;
+height:190px;
+}
+
+.pol img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+/* PAGE 7 */
+
+.type{
+font-size:.95rem;
+line-height:1.9;
+}
+
+}
 }
 
